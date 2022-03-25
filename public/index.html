@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/top-nav.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script defer src="js/actions.js"></script>
+
 </head>
 
 <body>
@@ -77,9 +79,9 @@
         </section>
         <section id="caracteristicas">
             <div class="center-text">
-                <h2>Características</h2>
-                <img src="img/caja-duoderm.png" alt="Duoderm">
-                <h3>Conoce todo lo que Duoderm tiene para mejorar tus actividades</h3>
+                <h2 data-aos="fade-up">Características</h2>
+                <img data-aos="fade-up" src="img/caja-duoderm.png" alt="Duoderm">
+                <h3data-aos="fade-up" >Conoce todo lo que Duoderm tiene para mejorar tus actividades</h3>
             </div>
             <div class="fila center-text">
                 <div class="columna">
@@ -114,6 +116,10 @@
                 pasos.</h3>
         </section>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
