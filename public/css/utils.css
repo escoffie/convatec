@@ -1,0 +1,35 @@
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.max-width {
+    max-width: 880px;
+    margin: auto;
+}
+
+.video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.center-text {
+    text-align: center;
+}
