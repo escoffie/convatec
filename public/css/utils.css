@@ -3,9 +3,32 @@
     height: auto;
 }
 
-.max-width {
-    max-width: 880px;
+.max-width-200 {
+    max-width: 200px;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+.max-width-400 {
+    max-width: 400px;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+.margin-vertical {
+    margin: 3em auto;
+}
+
+.section-max-width {
+    max-width: 1200px;
     margin: auto;
+}
+
+.section-background {
+    background-color: var(--primary-color-transparent);
+    background-image: url(../img/background-shapes.png);
+    background-size: cover;
+    padding: 3em 0;
 }
 
 .video-responsive {

@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: rgb(0, 122, 159);
+    --primary-color-transparent: rgb(147 222 255);
     --body-color: rgb(119, 119, 119);
     --body-font: 'Montserrat', sans-serif;
     --header-font: 'Raleway', sans-serif;
@@ -23,8 +24,10 @@ a {
     text-decoration: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: var(--header-font);
+    margin: 2em 25%;
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,8 +45,217 @@ header {
 
 header .logo {
     max-width: 250px;
+    padding-right: 2em;
 }
 
 header a {
     color: white;
+}
+
+section {
+    padding: 2em 1em 4em 1em;
+}
+
+#video {
+    margin-top: -2em;
+}
+
+#caracteristicas-lista {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.caracteristica {
+    flex: 100%;
+    margin: 1em;
+    box-shadow: 0 0 5px black;
+    border-radius: 0.5em;
+    padding: 2em 1em 1em !important;
+}
+
+#caracteristicas-lista h2 {
+    font-size: 1em;
+    margin: 2em;
+}
+
+#recuadros-lista {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:2em;
+}
+
+.recuadro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3em 1fr;
+    grid-gap: 2em;
+    grid-template-areas:    "image title"
+                            "image body";
+}
+.recuadro .foto {
+    grid-area: image;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 5px black;
+    border-radius: 0.5em;
+}
+.recuadro .titulo {
+    grid-area: title;
+}
+.recuadro .titulo h3 {
+    margin: 1em 0;
+    text-align: left;
+}
+.recuadro .cuerpo {
+    grid-area: body;
+    font-size: 0.75em;
+}
+.recuadro ul {
+    padding-left:1.25em;
+}
+
+#productos-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap:2em;
+}
+
+.producto {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    color: var(--body-color)
+}
+
+.producto:hover {
+    color: var(--primary-color);
+}
+
+.producto .boton {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 1.5em;
+    display: inline-block;
+    margin: auto;
+    max-width: 150px;
+    padding: 0.5em 1.5em;
+}
+
+.producto:hover .boton {
+    background-color: var(--primary-color-transparent);
+    color:black;
+}
+
+form#contacto {
+    max-width: 400px;
+    margin: auto;
+}
+form#contacto p {
+    margin: 0.25em;
+}
+form#contacto input,
+form#contacto textarea,
+form#contacto button {
+    border: 1px solid var(--primary-color);
+    padding: 0.75em;
+    background-color: azure;
+    width: 100%;
+    border-radius: 0.5em;
+}
+form#contacto button {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+form#contacto button:hover {
+    background-color: var(--body-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em;
+}
+
+footer a {
+    color: white;
+}
+
+.redes-sociales {
+    margin: 1em 0 2em;
+    padding: 0;
+    list-style: none;
+}
+
+.redes-sociales li {
+    display: inline-block;
+    width: 50px;
+}
+
+footer small {
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+    display: block;
+}
+
+@media only screen and (min-width: 600px) {
+    .caracteristica {
+        flex: calc(50% - 2em);
+        max-width: 50%;
+    }
+    #recuadros-lista {
+        grid-template-columns: 1fr;
+        grid-gap:2em;
+        max-width: 600px;
+        margin: auto;
+    }
+    #productos-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .caracteristica {
+        flex: calc(33.333% - 2em);
+        max-width: 33.333%;
+    }
+    #recuadros-lista {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:2em;
+        max-width: initial;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .caracteristica {
+        flex: calc(20% - 1em);
+        margin: 0.5em;
+    }
+    #recuadros-lista {
+        grid-gap:4em;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .recuadro {
+        grid-gap:1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:    "image"
+                                "title"
+                                "body";
+
+    }
+
+    .recuadro .foto {
+        min-height: 300px;
+    }
+
+    .recuadro .titulo h3 {
+        margin: 0;
+        text-align: left;
+    }
 }
