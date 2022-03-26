@@ -24,6 +24,10 @@ a {
     text-decoration: none;
 }
 
+strong {
+    color: var(--primary-color);
+}
+
 h1, h2, h3 {
     font-family: var(--header-font);
     margin: 2em 25%;
@@ -200,6 +204,37 @@ footer small {
     display: block;
 }
 
+/*INI Consejos de uso*/
+#consejos-de-uso {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    counter-reset: item;
+    padding: 0 1em;
+}
+#consejos-de-uso .foto {
+    box-shadow: 0 0 5px black;
+    border-radius: 0.5em;
+    background-size: cover;
+    background-position: bottom center;
+}
+#consejos-de-uso ol {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+#consejos-de-uso li {
+    margin: 1em 0;
+    display: block;
+}
+#consejos-de-uso li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: var(--primary-color);
+    margin-left: -1em;
+}
+/*END Consejos de uso*/
+
 @media only screen and (min-width: 600px) {
     .caracteristica {
         flex: calc(50% - 2em);
@@ -214,6 +249,10 @@ footer small {
     #productos-list {
         grid-template-columns: repeat(2, 1fr);
     }
+    #consejos-de-uso {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -226,6 +265,10 @@ footer small {
         grid-gap:2em;
         max-width: initial;
         margin: auto;
+    }
+    #consejos-de-uso {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
     }
 }
 
