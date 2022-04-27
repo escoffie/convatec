@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/top-nav.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/toast.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -216,13 +217,15 @@
         <section id="contactanos" class="section-background center-text">
             <h2>Contáctanos</h2>
             <p>Conoce más acerca de nuestros productos</p>
-            <form action="#" id="contacto">
-                <p><input type="text" name="form-nombre" placeholder="Nombre"></p>
-                <p><input type="text" name="form-correo" placeholder="Correo"></p>
-                <p><input type="text" name="form-telefono" placeholder="Teléfono"></p>
-                <p><textarea name="form-mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea></p>
-                <p><button type="submit">Enviar</button></p>
+            <form id="contacto">
+                <input required type="hidden" id="form-producto" name="form-producto" value="Duoderm Spots">
+                <p><input required type="text" id="form-nombre" name="form-nombre" placeholder="Nombre"></p>
+                <p><input required type="text" id="form-email" name="form-email" placeholder="Correo"></p>
+                <p><input required type="text" id="form-telefono" name="form-telefono" placeholder="Teléfono"></p>
+                <p><textarea required name="form-mensaje" id="form-mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea></p>
+                <p><button id="form-send" type="submit">Enviar</button></p>
             </form>
+            <div id="toasts"></div>
         </section>
         <footer class="center-text">
             <img src="img/logo-convatec.png" alt="" class="responsive max-width-200">
